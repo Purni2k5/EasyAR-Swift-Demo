@@ -9,7 +9,7 @@
 import UIKit
 import GLKit
 
-class ViewController: UIViewController {
+class ViewController: GLKViewController {
 
     private var glView: OpenGLView?
 
@@ -29,6 +29,7 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.glView?.initialize()
         self.glView?.start()
     }
     
